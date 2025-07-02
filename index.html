@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORXY - Konveksi Profesional Berkualitas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/928d09f4-1105-4af9-9919-78ae87365912.png') no-repeat center center;
+            background-size: cover;
+            min-height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -15px;
+            left: 0;
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            border: none;
+            padding: 10px 25px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+        }
+        
+        .btn-accent:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="img/orxy.png" alt="Logo ORXY Konveksi dengan teks tebal dan desain modern" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-accent ms-lg-3 mt-3 mt-lg-0">Pesan Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Kualitas Konveksi Terbaik dengan ORXY</h1>
+                    <p class="lead mb-4">Kami menyediakan berbagai produksi garment dengan kualitas premium dan jaminan kepuasan pelanggan.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#products" class="btn btn-primary">Lihat Produk</a>
+                        <a href="#contact" class="btn btn-outline-light">Hubungi Kami</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2eb3690f-4097-4c93-ba47-f5a8a5efe05f.png" alt="Tim produksi ORXY sedang bekerja di workshop konveksi modern" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5 my-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title">Tentang <span class="text-primary">ORXY</span></h2>
+                    <p class="text-muted mb-4">ORXY adalah perusahaan konveksi profesional yang telah berdiri sejak 2010, melayani berbagai kebutuhan garment dengan kualitas terbaik.</p>
+                    <p>Kami memiliki tim yang berpengalaman dalam bidang konveksi dengan mesin-mesin modern yang selalu terawat dengan baik. Komitmen kami adalah memberikan produk berkualitas dengan pelayanan terbaik.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Bahan berkualitas premium</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Jahitan rapi dan presisi</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Garansi kepuasan pelanggan</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Harga kompetitif</li>
+                    </ul>
+                    <a href="#services" class="btn btn-primary">Lihat Layanan Kami</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/976d49c3-d5b4-42dd-85e7-4863de1c990b.png" alt="Gedung produksi ORXY dengan area workshop yang luas dan bersih" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Layanan <span class="text-primary">Kami</span></h2>
+                <p class="text-muted">Kami menawarkan berbagai layanan konveksi untuk kebutuhan Anda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-cut fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Produksi Kemeja</h4>
+                            <p class="text-muted">Desain dan produksi kemeja dengan berbagai model dan bahan berkualitas untuk kebutuhan formal maupun casual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-tshirt fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Konveksi Kaos</h4>
+                            <p class="text-muted">Produksi kaos dengan berbagai bahan mulai dari katun combed hingga TC, serta sablon atau bordir berkualitas tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-vest fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Seragam Kantor</h4>
+                            <p class="text-muted">Desain dan produksi seragam kantor profesional dengan bahan berkualitas dan sesuai identitas perusahaan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-school fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Seragam Sekolah</h4>
+                            <p class="text-muted">Produksi seragam sekolah dengan standar kualitas tinggi dan berbagai model sesuai kebutuhan institusi pendidikan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-medal fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Seragam Olahraga</h4>
+                            <p class="text-muted">Produksi seragam olahraga dengan bahan yang nyaman, menyerap keringat, dan desain yang sporty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-wrapper mb-4">
+                                <i class="fas fa-plus-circle fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Layanan Custom</h4>
+                            <p class="text-muted">Produksi custom sesuai desain dan kebutuhan khusus Anda, dengan konsultasi langsung bersama tim kami.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5 my-5" id="products">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Produk <span class="text-primary">Kami</span></h2>
+                <p class="text-muted">Berbagai produk konveksi berkualitas yang kami tawarkan</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/68036bf0-92c4-45a9-ad7f-049a5e1d4ef3.png" class="card-img-top" alt="Kemeja formal pria warna putih dengan bahan katun berkualitas tinggi">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Kemeja Formal</h5>
+                            <p class="text-muted">Rp 120.000 - 250.000</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/935b2727-870d-4519-a80c-4438f2adc14d.png" class="card-img-top" alt="Kaos oblong dengan desain simple dan bahan katun combed 24s">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Kaos Oblong</h5>
+                            <p class="text-muted">Rp 45.000 - 85.000</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7590bec-8d6f-40a2-b600-60dd88742258.png" class="card-img-top" alt="Seragam kerja kantor wanita dengan blazer dan rok bahan tahan lama">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Seragam Kantor</h5>
+                            <p class="text-muted">Rp 175.000 - 350.000</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3c89300c-e856-49d6-8706-24d3cca97a6f.png" class="card-img-top" alt="Seragam sekolah putih biru dengan bahan nyaman dan mudah dirawat">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Seragam Sekolah</h5>
+                            <p class="text-muted">Rp 95.000 - 150.000</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-primary px-5">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light" id="testimonials">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Apa Kata <span class="text-primary">Pelanggan</span></h2>
+                <p class="text-muted">Testimoni dari klien yang puas bekerja sama dengan kami</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-quote-left fa-2x text-primary"></i>
+                        </div>
+                        <p class="mb-4">"ORXY telah menjadi mitra konveksi kami selama 3 tahun. Kualitas produknya konsisten tinggi dan selalu tepat waktu. Sangat direkomendasikan!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/307634db-1085-41ad-8ddd-e7c0f366312a.png" class="rounded-circle me-3" alt="Foto profil direktur perusahaan retail" width="60">
+                            <div>
+                                <h6 class="mb-0">Budi Santoso</h6>
+                                <small class="text-muted">Direktur, Retail Indonesia</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-quote-left fa-2x text-primary"></i>
+                        </div>
+                        <p class="mb-4">"Seragam sekolah yang diproduksi ORXY sangat nyaman dipakai dan tahan lama. Orang tua siswa juga puas dengan kualitasnya."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2e190e01-a115-48f2-9341-33292f40e388.png" class="rounded-circle me-3" alt="Foto profil kepala sekolah SMP Cahaya Bangsa" width="60">
+                            <div>
+                                <h6 class="mb-0">Siti Rahayu</h6>
+                                <small class="text-muted">Kepala Sekolah, SMP Cahaya Bangsa</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-quote-left fa-2x text-primary"></i>
+                        </div>
+                        <p class="mb-4">"Tim kreatif ORXY membantu mewujudkan desain kaos komunitas kami dengan sempurna. Sablonnya tajam dan tidak mudah luntur."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d97cba5d-cba8-4859-8778-4fa83d9e1e31.png" class="rounded-circle me-3" alt="Foto profil ketua komunitas penggemar sepeda" width="60">
+                            <div>
+                                <h6 class="mb-0">Andi Wijaya</h6>
+                                <small class="text-muted">Ketua, Komunitas Bike Lovers</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 my-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title mb-4">Hubungi <span class="text-primary">Kami</span></h2>
+                    <p class="mb-4">Pesan sekarang atau konsultasikan kebutuhan konveksi Anda dengan tim profesional kami.</p>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Alamat</h6>
+                                    <small class="text-muted">Jl. Industri Raya No. 123, Jakarta Barat</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Telepon</h6>
+                                    <small class="text-muted">(021) 55667788</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Email</h6>
+                                    <small class="text-muted">info@orxykonveksi.com</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-wrapper bg-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Jam Kerja</h6>
+                                    <small class="text-muted">Senin-Sabtu: 08.00-17.00 WIB</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Form Pemesanan</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">No. Telepon</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="product" class="form-label">Produk yang Diminati</label>
+                                        <select class="form-select" id="product">
+                                            <option selected disabled>Pilih Produk</option>
+                                            <option value="kemeja">Kemeja</option>
+                                            <option value="kaos">Kaos</option>
+                                            <option value="seragam-kantor">Seragam Kantor</option>
+                                            <option value="seragam-sekolah">Seragam Sekolah</option>
+                                            <option value="lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Detail Pesanan</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Jumlah, ukuran, bahan, dll."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100">Kirim Pesanan</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9472677e-90ef-4133-ad0b-c0d0781cbf3f.png" alt="Logo ORXY Konveksi versi putih untuk dark background" class="mb-3" style="height: 40px;">
+                    <p class="text-white-50">ORXY adalah perusahaan konveksi profesional yang berkomitmen memberikan produk berkualitas dengan pelayanan terbaik.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Tautan</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50">Beranda</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">Tentang</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Layanan</a></li>
+                        <li class="mb-2"><a href="#products" class="text-white-50">Produk</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white-50">Testimoni</a></li>
+                        <li><a href="#contact" class="text-white-50">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white mb-4">Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Produksi Kemeja</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Konveksi Kaos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Seragam Kantor</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Seragam Sekolah</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Seragam Olahraga</a></li>
+                        <li><a href="#" class="text-white-50">Layanan Custom</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white mb-4">Kontak</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Industri Raya No. 123, Jakarta Barat</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> (021) 55667788</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@orxykonveksi.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Senin-Sabtu: 08.00-17.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">© 2023 ORXY Konveksi. Seluruh hak cipta dilindungi.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 me-3">Kebijakan Privasi</a>
+                    <a href="#" class="text-white-50">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
